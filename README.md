@@ -14,5 +14,7 @@ EARTHDATA
   Para descargar los datos IMERG es necesario registrarse en https://urs.earthdata.nasa.gov/. 
   Una vez creada la cuenta vamos al siguiente enlace https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGDF_06/summary
   
-  ![image](https://user-images.githubusercontent.com/16006452/145517562-1aa7fbfb-9690-46ea-9090-282ae3b66004.png)
+  <p align="center">
+    <img src=https://user-images.githubusercontent.com/16006452/145517562-1aa7fbfb-9690-46ea-9090-282ae3b66004.png" width="350" title="EARTHDATA")>
+  </p>                                                                                                                                     
 
