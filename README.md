@@ -13,8 +13,22 @@ PROMETEUS
 EARTHDATA
   Para descargar los datos IMERG es necesario registrarse en https://urs.earthdata.nasa.gov/. 
   Una vez creada la cuenta vamos al siguiente enlace https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGDF_06/summary
+  En la opción de "Get Data" podremos generar un archivo de texto con los archivos que deseamos descargar, mas adelante usaremos ese archivo para descargar los datasets. Los datos son multidimensionales en formato netCDF4.
+
+  Codigo bash
   
-  <p align="center">
-    <img src=https://user-images.githubusercontent.com/16006452/145517562-1aa7fbfb-9690-46ea-9090-282ae3b66004.png" width="350" title="EARTHDATA")>
-  </p>                                                                                                                                     
+### Análisis exploratorio de datos
+### Generación del conjunto de datos tidy
+  Un script de R de limpieza básica que leea los datos crudos y devuelva los datos acomodados
+  Los datos en forma tidy, ya sea en csv, parquet, o sqlite
+  Un diccionario de datos especificando las descripciones de cada atributo y sus unidades
+### Limpieza de datos
+  Armonizacion de variables
+  Manejo correcto y codificacion de datos cuantitativos
+  Manejo de valores perdidos
+  Deteccion y manejo de valores anómalos
+### Visualiacion de la información utilizando un método de reducción de características (PCA, t-SNE)
+
+  
+
 
