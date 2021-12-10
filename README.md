@@ -18,6 +18,8 @@ EARTHDATA
   Codigo bash
   
 ### Análisis exploratorio de datos
+
+
 ### Generación del conjunto de datos tidy
   Un script de R de limpieza básica que leea los datos crudos y devuelva los datos acomodados
   Los datos en forma tidy, ya sea en csv, parquet, o sqlite
