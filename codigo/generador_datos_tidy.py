@@ -235,7 +235,7 @@ adata = pd.merge(adata_merged, adata_obr, on="date")
 adata.info()
 
 
-# #### Por último generamos el archvo tidy_data.csv para trabajar con el mas adelante
+# #### Por último generamos el archvo tidy_data.csv y el diccionario de datos para trabajar con ellos mas adelante
 
 # In[29]:
 
@@ -248,11 +248,48 @@ adata.rename(columns = {"city": "city_obr",
                         "precipitation_nog": "prcp_nog"},
              inplace = True)
 
+#Seleccionamos las que nos interesan
 sel_adata = adata[["date","city_hmo","city_nog","city_obr",
                    "HQprcp_hmo","HQprcp_nog","HQprcp_obr",
                    "prcp_hmo","prcp_nog","prcp_obr"]]
 
+#Guardamos en formato csv
 sel_adata.to_csv("datos_tidy.csv", index=False)
+
+
+# In[35]:
+
+
+#Diccionario de Datos
+columna = [
+    "date",
+    "city_hmo",
+    "city_nog",
+    "city_obr",
+    "HQprcp_hmo",
+    "HQprcp_nog",
+    "HQprcp_obr",
+    "prcp_hmo",
+    "prcp_nog",
+    "prcp_obr",
+    ]
+
+descripcion = [
+    "Fecha de pronóstico YYYY-mm-dd",
+    "Ciudad de Hermosillo",
+    "Ciudad de Nogales",
+    "Ciudad de Obregón",
+    "Pronóstico de precipitación acumulada 24hrs de la NASA para Hermosillo",
+    "Pronóstico de precipitación acumulada 24hrs de la NASA para Nogales",
+    "Pronóstico de precipitación acumulada 24hrs de la NASA para Ciudad Obregón",
+    "Pronóstico de precipitación acumulada 24hrs de PROMETEUS para Hermosillo",
+    "Pronóstico de precipitación acumulada 24hrs de PROMETEUS para Nogales",
+    "Pronóstico de precipitación acumulada 24hrs de PROMETEUS para Ciudad Obregón",
+    ]
+
+data = pd.DataFrame({"Columna": columna, "Descripción": descripcion})
+
+data.to_csv("diccionario_datos.csv", index=False)
 
 
 # In[ ]:
