@@ -15,7 +15,11 @@ El proceso que se siguio fue tomar cada uno de los datos de PROMETEUS y la NASA 
 
 ### Limpieza de datos
 Se trabajó en la correcta codificación de datos de tipo fecha, numericos y de cadenas, asi como la armonización de variables. También se le realizaron técnicas para encontrar y solucionar el problema de datos faltantes que si fueron bastantes mas de los esperados, una de las tecnicas para la imputación de los datos fue interpolar los valores de precipitacion con el ultimo valido y el siguiente valido al faltante. En el caso de los nombres de ciudad solo se asignaron la que les correspondia. Por último se genero otro dataset en csv con la información limpia y completa.
-El código que se utilizó fue el siguiente. 
-  
+El código que se utilizó fue el siguiente. [limpieza_datos](codigo/limpieza_datos.py)
+
+### Análisis exploratorio de datos
+Se realizón un análisis exploratorio de datos sencillo, en el cual se pudieron ver algunos detalles de los pronósticos, por ejemplo vimos que hay una relacion entre el pronóstico de Hermosillo y la Ciudad de Obregón, tanto para la información de la NASA como de PROMETEUS. Esto puede significar que de cierta manera las condiciones climaticas afectan entre si, mas adelante podriamos revisar eso, aunque es indispensable contar con datos de mediciones reales para asegurarnos de que sea cierto.
+El codigó que se utilizo es el siguiente [EDA](codigo/eda.py)
+
 
 
