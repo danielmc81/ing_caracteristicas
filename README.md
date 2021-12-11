@@ -6,31 +6,16 @@ PROMETEUS genera diariamente datos de pronóstico del noroeste del México, con 
 EARTHDATA genera la información con un atraso de 4 meses aproximadamente, el algoritmo IMERG maneja una resolución de 10 Km.
 
 ### Obtención de los datos
-PROMETEUS
-  Los datos de pronóstico de prometeus no estan disponibles públicamente, para conseguirlos es necesario escribirle al responsable del proyecto Dr. Carlos Minjares. La información completa esta en la página oficial prometeus.unison.mx.
-  La información nos la proporcionaron en formato csv el cual contiene el pronóstico a 84 horas de distintas ciudades de los estados de Sonora, Sinaloa y Chihuahua.
+Las fuentes de datos son EARTHDATA y PROMETEUS, en este proceso se descargarán los datos utilizando la metodología especificada por el emisor de la información. Por lo general vienen en formato RAW y es por eso que es necesario pre-procesarlos para despues trabajar con ellos.  
+El procedimiento que se siguió para su descarga fue el siguiente [Obtención de Datos](obtencion_datos.md)
 
-EARTHDATA
-  Para descargar los datos IMERG es necesario registrarse en https://urs.earthdata.nasa.gov/. 
-  Una vez creada la cuenta vamos al siguiente enlace https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGDF_06/summary
-  En la opción de "Get Data" podremos generar un archivo de texto con los archivos que deseamos descargar, mas adelante usaremos ese archivo para descargar los datasets. Los datos son multidimensionales en formato netCDF4.
+### Generación de datos tidy
+Para este proceso se utilizo código en python mediante una libreta de jupyter, también se genero como script. Los archivos se llaman [generador_datos_tidy](codigo/generador_datos_tidy.ipynb) y [generador_datos_tidy.py](codigo/generador_datos_tidy.py)  
+El proceso que se siguio fue tomar cada uno de los datos de PROMETEUS y la NASA para extraer de cada uno las características de 3 ciudades de Hermosillo, las cuales se eligieron porque son las que estaban en todos los dataset de PROMETEUS. Se hizo lo mismo para los datos de la NASA, primero buscando las coordenadas que mas se acercaban a las coordenadas a comparar, luego de ahi se extrajo la información de solo esos puntos. Por ultmo se genero un solo dataframe que se guardo en el archivo [datos_tidy](datos_tidy.csv) y el diccionario de datos [diccionario_datos](diccionario_datos.csv)
 
-  Codigo bash
-  
-### Análisis exploratorio de datos
-
-
-### Generación del conjunto de datos tidy
-  Un script de R de limpieza básica que leea los datos crudos y devuelva los datos acomodados
-  Los datos en forma tidy, ya sea en csv, parquet, o sqlite
-  Un diccionario de datos especificando las descripciones de cada atributo y sus unidades
 ### Limpieza de datos
-  Armonizacion de variables
-  Manejo correcto y codificacion de datos cuantitativos
-  Manejo de valores perdidos
-  Deteccion y manejo de valores anómalos
-### Visualiacion de la información utilizando un método de reducción de características (PCA, t-SNE)
-
+Se trabajó en la correcta codificación de datos de tipo fecha, numericos y de cadenas, asi como la armonización de variables. También se le realizaron técnicas para encontrar y solucionar el problema de datos faltantes que si fueron bastantes mas de los esperados, una de las tecnicas para la imputación de los datos fue interpolar los valores de precipitacion con el ultimo valido y el siguiente valido al faltante. En el caso de los nombres de ciudad solo se asignaron la que les correspondia. Por último se genero otro dataset en csv con la información limpia y completa.
+El código que se utilizó fue el siguiente. 
   
 
 
