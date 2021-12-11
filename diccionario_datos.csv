@@ -1,0 +1,11 @@
+Columna,Descripción
+date,Fecha de pronóstico YYYY-mm-dd
+city_hmo,Ciudad de Hermosillo
+city_nog,Ciudad de Nogales
+city_obr,Ciudad de Obregón
+HQprcp_hmo,Pronóstico de precipitación acumulada 24hrs de la NASA para Hermosillo
+HQprcp_nog,Pronóstico de precipitación acumulada 24hrs de la NASA para Nogales
+HQprcp_obr,Pronóstico de precipitación acumulada 24hrs de la NASA para Ciudad Obregón
+prcp_hmo,Pronóstico de precipitación acumulada 24hrs de PROMETEUS para Hermosillo
+prcp_nog,Pronóstico de precipitación acumulada 24hrs de PROMETEUS para Nogales
+prcp_obr,Pronóstico de precipitación acumulada 24hrs de PROMETEUS para Ciudad Obregón
