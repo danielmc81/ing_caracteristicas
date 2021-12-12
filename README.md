@@ -22,6 +22,6 @@ Se realizó un análisis exploratorio de datos sencillo, en el cual se pudieron 
 El codigó que se utilizo es el siguiente [EDA](codigo/eda.py)
 
 ### Tablero de información
-Como reporte final se genero un tablero desarrollado en dash y python, el código es el siguiente [reporte](reporte.ipynb). esta hospedado en Heroku en la siguiente liga.
+Como reporte final se genero un tablero desarrollado en dash y python, el código es el siguiente [reporte](reporte.ipynb). esta hospedado en Heroku en la siguiente liga [reporte-prometeus.herokuap.com](https://reporte-prometeus.herokuapp.com/).
 
 
